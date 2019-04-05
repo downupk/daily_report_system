@@ -18,7 +18,7 @@ import javax.persistence.Table;
             query = "SELECT e FROM Employee AS e ORDER BY e.id DESC"
             ),
     @NamedQuery(
-            name = "getEmployeeCount",
+            name = "getEmployeesCount",
             query = "SELECT COUNT(e) FROM Employee AS e"
             ),
     @NamedQuery(
@@ -58,7 +58,7 @@ public class Employee {
     @Column(name = "delete_flag", nullable = false)
     private Integer delete_flag;
 
-    public Integer getID() {
+    public Integer getId() {
         return id;
     }
 
@@ -94,7 +94,7 @@ public class Employee {
         return admin_flag;
     }
 
-    public void setAdimin_flag(Integer admin_flag) {
+    public void setAdmin_flag(Integer admin_flag) {
         this.admin_flag = admin_flag;
     }
 
@@ -121,5 +121,4 @@ public class Employee {
     public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
-
 }
